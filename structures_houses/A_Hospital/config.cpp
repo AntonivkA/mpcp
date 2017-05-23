@@ -32,6 +32,7 @@ class CfgVehicles
 	{
 		model = "\dz\structures\House\A_Hospital\A_Hospital.p3d";
 		ladders[] = {{"Ladder01_start","Ladder01_end"},{"Ladder02_start","Ladder02_end"},{"Ladder03_start","Ladder03_end"},{"Ladder04_start","Ladder04_end"}};
+		displayName = "Hospital";
 		class AnimationSources
 		{
 			class doors1

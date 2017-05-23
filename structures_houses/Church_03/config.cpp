@@ -31,6 +31,7 @@ class CfgVehicles
 	class Land_Church_03: HouseNoDestruct
 	{
 		model = "\dz\structures\House\Church_03\Church_03.p3d";
+		displayName = "Church 3";
 		class AnimationSources
 		{
 			class doorstwin1

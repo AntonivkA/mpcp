@@ -58,7 +58,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -126,7 +126,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -152,13 +152,13 @@ class CfgVehicles
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doorstwin2_action;
+				position = doorstwin3_action;
 				condition = ((this animationSourcePhase 'doorstwin3') >= 0.5);
 				statement = (this animateSource ['doorstwin3', 0]);
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doorstwin2_action;
+				position = doorstwin3_action;
 				condition = ((this animationSourcePhase 'doorstwin3') < 0.5);
 				statement = (this animateSource ['doorstwin3', 1]);
 			};
@@ -205,7 +205,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -278,7 +278,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -361,7 +361,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);

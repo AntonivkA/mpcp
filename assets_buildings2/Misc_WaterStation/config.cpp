@@ -53,17 +53,17 @@ class cfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = ((this animationSourcePhase 'doors1') < 0.5);
+				statement = (this animateSource ['doors1', 1]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = ((this animationSourcePhase 'doors1') >= 0.5);
+				statement = (this animateSource ['doors1', 0]);
 			};
 		};
 	};

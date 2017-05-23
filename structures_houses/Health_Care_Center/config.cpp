@@ -32,6 +32,7 @@ class CfgVehicles
 	class Land_Health_care_center: HouseNoDestruct
 	{
 		model = "DZ\structures\House\Health_Care_Center\Health_care_center.p3d";
+		displayName = "Health Care Center";
 		class AnimationSources 
 		{
 			class doors1 {

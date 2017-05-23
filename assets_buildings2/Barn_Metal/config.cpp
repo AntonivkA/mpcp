@@ -65,7 +65,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2.5;
+				radius = 6;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') < 0.5);
 				statement = (this animateSource ['doors1', 1]);

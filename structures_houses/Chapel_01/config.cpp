@@ -31,6 +31,7 @@ class CfgVehicles
 	class Land_Chapel_01: HouseNoDestruct
 	{
 		model = "DZ\structures\House\Chapel_01\Chapel_01.p3d";
+		displayName = "Chapel";
 		class AnimationSources
 		{
 			class doors1
@@ -47,19 +48,19 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				radius = 2.5;
+				radius = 4;
 				onlyForPlayer = 0;
 				position = doors1_action;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = ((this animationSourcePhase 'doors1') >= 0.5);
+				statement = (this animateSource ['doors1', 0]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
 				displayName = "$STR_DN_OUT_C_DOOR";
 				position = doors1_action;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = ((this animationSourcePhase 'doors1') < 0.5);
+				statement = (this animateSource ['doors1', 1]);
 			};
 		};
 	};

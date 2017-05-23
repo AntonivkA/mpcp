@@ -66,7 +66,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -152,7 +152,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);
@@ -242,7 +242,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doorstwin1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
 				statement = (this animateSource ['doorstwin1', 0]);

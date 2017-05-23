@@ -48,6 +48,7 @@ class CfgVehicles
 	class Land_HouseV_1I1: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1I1";
+		displayName = "House 1";
 		class AnimationSources
 		{
 			class doors1
@@ -73,7 +74,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -114,6 +115,7 @@ class CfgVehicles
 	class Land_HouseV_1I2: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1I2";
+		displayName = "House 2";
 		class AnimationSources
 		{
 			class doors1
@@ -134,7 +136,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -161,32 +163,33 @@ class CfgVehicles
 			class OpenDoors_3: OpenDoors_1
 			{
 				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
+				condition = ((this animationSourcePhase 'doors3') < 0.5);
+				statement = (this animateSource ['doors3', 1]);
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
 				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3', 1]);
+				condition = ((this animationSourcePhase 'doors3') >= 0.5);
+				statement = (this animateSource ['doors3', 0]);
 			};
 			class OpenDoors_4: OpenDoors_1
 			{
 				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4', 0]);
+				condition = ((this animationSourcePhase 'doors4') < 0.5);
+				statement = (this animateSource ['doors4', 1]);
 			};
 			class CloseDoors_4: CloseDoors_1
 			{
 				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') < 0.5);
-				statement = (this animateSource ['doors4', 1]);
+				condition = ((this animationSourcePhase 'doors4') >= 0.5);
+				statement = (this animateSource ['doors4', 0]);
 			};
 		};
 	};
 	class Land_HouseV_1I3: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1I3";
+		displayName = "House 3";
 		class AnimationSources
 		{
 			class doors1
@@ -205,7 +208,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -234,6 +237,7 @@ class CfgVehicles
 	class Land_HouseV_1I4: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1I4.p3d";
+		displayName = "House 4";
 		class AnimationSources
 		{
 			class doors1
@@ -252,7 +256,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -281,6 +285,7 @@ class CfgVehicles
 	class Land_HouseV_1L1: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1L1";
+		displayName = "House 5";
 		class AnimationSources
 		{
 			class doors1
@@ -298,7 +303,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -315,6 +320,7 @@ class CfgVehicles
 	class Land_HouseV_1L2: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1L2";
+		displayName = "House 6";
 		class AnimationSources
 		{
 			class doors1
@@ -334,7 +340,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -375,6 +381,7 @@ class CfgVehicles
 	class Land_HouseV_1T: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_1T";
+		displayName = "House 7";
 		class AnimationSources
 		{
 			class doors1
@@ -396,7 +403,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -461,6 +468,7 @@ class CfgVehicles
 	class Land_HouseV_2I: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_2I";
+		displayName = "House 8";
 		class AnimationSources
 		{
 			class doors1
@@ -482,7 +490,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -547,6 +555,7 @@ class CfgVehicles
 	class Land_HouseV_2L: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_2L";
+		displayName = "House 9";
 		class AnimationSources
 		{
 			class doors1
@@ -568,7 +577,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -633,6 +642,7 @@ class CfgVehicles
 	class Land_houseV_2T1: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\houseV_2T1";
+		displayName = "House 10";
 		class AnimationSources
 		{
 			class doors1
@@ -657,7 +667,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -758,6 +768,7 @@ class CfgVehicles
 	class Land_houseV_2T2: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\houseV_2T2";
+		displayName = "House 11";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -840,6 +851,7 @@ class CfgVehicles
 	class Land_HouseV_3I1: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\HouseV_3I1";
+		displayName = "House 12";
 		class AnimationSources
 		{
 			class doors1
@@ -860,7 +872,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -913,6 +925,7 @@ class CfgVehicles
 	class Land_HouseV_3I2: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_3I2";
+		displayName = "House 13";
 		class AnimationSources
 		{
 			class doors1
@@ -933,7 +946,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 3;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);
@@ -974,6 +987,7 @@ class CfgVehicles
 	class Land_HouseV_3I3: HouseWithFireplace
 	{
 		model = "\dz\structures\House\HouseV\HouseV_3I3";
+		displayName = "House 14";
 		class AnimationSources
 		{
 			class doors1
@@ -1008,6 +1022,7 @@ class CfgVehicles
 	class Land_HouseV_3I4: HouseNoDestruct
 	{
 		model = "\dz\structures\House\HouseV\HouseV_3I4";
+		displayName = "House 15";
 		class AnimationSources
 		{
 			class doors1

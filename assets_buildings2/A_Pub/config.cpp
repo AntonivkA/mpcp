@@ -1,12 +1,5 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 6.18
-//'now' is Wed May 17 08:05:48 2017 : 'file' last modified on Fri Jan 27 16:46:09 2017
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
 
-//(12 Enums)
 enum {
 	destructengine = 2,
 	destructdefault = 6,
@@ -22,7 +15,6 @@ enum {
 	destructbuilding = 1
 };
 
-//Class assets_buildings2 : A_Pub\config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_A_Pub
@@ -188,4 +180,3 @@ class CfgVehicles
 		};
 	};
 };
-//};
