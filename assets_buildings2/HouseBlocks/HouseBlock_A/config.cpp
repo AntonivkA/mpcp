@@ -1,5 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 6.18
+//'now' is Wed May 24 10:50:54 2017 : 'file' last modified on Fri Jan 27 09:46:10 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
+//(12 Enums)
 enum {
 	destructengine = 2,
 	destructdefault = 6,
@@ -15,6 +22,7 @@ enum {
 	destructbuilding = 1
 };
 
+//Class /mnt/g/HouseBlocks/HouseBlock_A/config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_HouseBlocks_HouseBlock_A
@@ -32,10 +40,7 @@ class CfgVehicles
 	class Land_HouseBlock_A1: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A1.p3d";
-		scope = 2;
 		displayName = "House Block A1";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -98,11 +103,8 @@ class CfgVehicles
 	};
 	class Land_HouseBlock_A1_1: HouseBlock_Base
 	{
-		scope = 2;
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A1_1.p3d";
 		displayName = "House Block A1_1";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -179,10 +181,7 @@ class CfgVehicles
 	class Land_HouseBlock_A1_2: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A1_2.p3d";
-		scope = 2;
 		displayName = "House Block A1_2";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -243,21 +242,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Land_HouseBlock_A1_half_ruin: HouseBlock_Base
-	{
-		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A1_half_ruin.p3d";
-		scope = 2;
-		displayName = "House Block A1 (ruin)";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
-	};
 	class Land_HouseBlock_A2: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A2.p3d";
-		scope = 2;
 		displayName = "House Block A2";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -328,13 +316,14 @@ class CfgVehicles
 			};
 		};
 	};
+	class Land_HouseBlock_A2_2: Land_HouseBlock_A2
+	{
+		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A2_2.p3d";
+	};
 	class Land_HouseBlock_A2_1: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A2_1.p3d";
-		scope = 2;
 		displayName = "House Block A2_1";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -411,20 +400,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class Land_HouseBlock_A2_2: Land_HouseBlock_A2
-	{
-		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A2_2.p3d";
-		scope = 2;
-		displayName = "House Block A2_2";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
-	};
 	class Land_HouseBlock_A3: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_A\HouseBlock_A3.p3d";
-		scope = 2;
-		displayName = "House Block A3";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 	};
 };

@@ -1,5 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 6.18
+//'now' is Wed May 24 11:04:27 2017 : 'file' last modified on Fri Jan 27 09:46:10 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
+//(12 Enums)
 enum {
 	destructengine = 2,
 	destructdefault = 6,
@@ -15,6 +22,7 @@ enum {
 	destructbuilding = 1
 };
 
+//Class /mnt/g/HouseBlocks/HouseBlock_B/config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_HouseBlocks_HouseBlock_B
@@ -32,10 +40,7 @@ class CfgVehicles
 	class Land_HouseBlock_B1: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B1.p3d";
-		scope = 2;
 		displayName = "House Block B1";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -134,10 +139,7 @@ class CfgVehicles
 	class Land_HouseBlock_B2: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B2.p3d";
-		scope = 2;
 		displayName = "House Block B2";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -188,10 +190,7 @@ class CfgVehicles
 	class Land_HouseBlock_B3: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B3.p3d";
-		scope = 2;
 		displayName = "House Block B3";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doors1
@@ -226,10 +225,7 @@ class CfgVehicles
 	class Land_HouseBlock_B4: Land_HouseBlock_B1
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B4.p3d";
-		scope = 2;
 		displayName = "House Block B4";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -296,10 +292,7 @@ class CfgVehicles
 	class Land_HouseBlock_B5: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B5.p3d";
-		scope = 2;
 		displayName = "House Block B5";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -347,10 +340,7 @@ class CfgVehicles
 	class Land_HouseBlock_B6: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_B\HouseBlock_B6.p3d";
-		scope = 2;
 		displayName = "House Block B6";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doors1
@@ -383,3 +373,4 @@ class CfgVehicles
 		};
 	};
 };
+//};

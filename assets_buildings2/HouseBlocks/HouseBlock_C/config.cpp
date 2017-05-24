@@ -1,5 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 6.18
+//'now' is Wed May 24 11:04:31 2017 : 'file' last modified on Fri Jan 27 09:46:10 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
+//(12 Enums)
 enum {
 	destructengine = 2,
 	destructdefault = 6,
@@ -15,6 +22,7 @@ enum {
 	destructbuilding = 1
 };
 
+//Class /mnt/g/HouseBlocks/HouseBlock_C/config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_HouseBlocks_HouseBlock_C
@@ -33,10 +41,7 @@ class CfgVehicles
 	class Land_HouseBlock_C2: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_C\HouseBlock_C2.p3d";
-		scope = 2;
 		displayName = "House Block C2";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -119,10 +124,7 @@ class CfgVehicles
 	class Land_HouseBlock_C3: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_C\HouseBlock_C3.p3d";
-		scope = 2;
 		displayName = "House Block C3";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -202,21 +204,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class Land_HouseBlock_C3_occluder: Land_HouseBlock_C3
-	{
-		model = "\dz\buildings2\HouseBlocks\HouseBlock_C\HouseBlock_C3_occluder.p3d";
-		scope = 2;
-		displayName = "House Block C3 occluder";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
-	};
 	class Land_HouseBlock_C4: HouseBlock_Base
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_C\HouseBlock_C4.p3d";
-		scope = 2;
 		displayName = "House Block C4";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 		class AnimationSources
 		{
 			class doorstwin1
@@ -284,17 +275,10 @@ class CfgVehicles
 	class Land_HouseBlock_C5: Land_HouseBlock_C4
 	{
 		model = "dz\buildings2\HouseBlocks\HouseBlock_C\HouseBlock_C5.p3d";
-		scope = 2;
-		displayName = "House Block C5";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 	};
 	class Land_HouseBlock_C5_Ruins: Ruins
 	{
 		model = "\dz\buildings2\HouseBlocks\HouseBlock_C\houseblock_c5_ruins.p3d";
-		scope = 2;
-		displayName = "House Block C5 (ruins)";
-		editorCategory = "DayZ";
-		editorSubcategory = "DayZ_Buildings";
 	};
 };
+//};
