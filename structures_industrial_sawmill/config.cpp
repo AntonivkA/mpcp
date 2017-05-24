@@ -31,6 +31,7 @@ class CfgVehicles
 	class Land_Ind_SawMill: HouseNoDestruct
 	{
 		model = "\dz\structures\Ind_SawMill\Ind_SawMill.p3d";
+		displayName = "Saw Mill";
 		armor = 20000;
 		ladders[] = {{"start","end"}};
 		class AnimationSources
@@ -50,17 +51,17 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors3_action;
-				radius = 2;
+				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = ((this animationSourcePhase 'doors3') < 0.5);
+				statement = (this animateSource ['doors3', 1]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3', 1]);
+				condition = ((this animationSourcePhase 'doors3') >= 0.5);
+				statement = (this animateSource ['doors3', 0]);
 			};
 		};
 	};

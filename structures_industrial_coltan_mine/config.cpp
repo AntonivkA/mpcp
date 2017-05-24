@@ -31,6 +31,7 @@ class CfgVehicles
 	class Land_Ind_Coltan_Main_EP1: HouseNoDestruct
 	{
 		model = "DZ\structures\Ind_Coltan_Mine\Ind_Coltan_Main_EP1.p3d";
+		displayName = "Coltan Main";
 		ladders[] = {{"start1","end1"},{"start2","end2"}};
 		class AnimationSources
 		{

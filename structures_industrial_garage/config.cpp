@@ -31,6 +31,7 @@ class CfgVehicles
 	class Land_Ind_GarageRow: HouseNoDestruct
 	{
 		model = "\DZ\structures\Ind_Garage\Ind_GarageRow.p3d";
+		displayName = "Garage Row";
 		ladders[] = {{"start","end"}};
 		class AnimationSources
 		{
@@ -63,83 +64,84 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = ((this animationSourcePhase 'doors1') < 0.5);
+				statement = (this animateSource ['doors1', 1]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = ((this animationSourcePhase 'doors1') >= 0.5);
+				statement = (this animateSource ['doors1', 0]);
 			};
 			class OpenDoors_2: OpenDoors_1
-			{
-				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') >= 0.5);
-				statement = (this animateSource ['doors2', 0]);
-			};
-			class CloseDoors_2: CloseDoors_1
 			{
 				position = doors2_action;
 				condition = ((this animationSourcePhase 'doors2') < 0.5);
 				statement = (this animateSource ['doors2', 1]);
 			};
-			class OpenDoors_3: OpenDoors_1
+			class CloseDoors_2: CloseDoors_1
 			{
-				position = doorstwin1_action;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				position = doors2_action;
+				condition = ((this animationSourcePhase 'doors2') >= 0.5);
+				statement = (this animateSource ['doors2', 0]);
 			};
-			class CloseDoors_3: CloseDoors_1
+			class OpenDoors_3: OpenDoors_1
 			{
 				position = doorstwin1_action;
 				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
 				statement = (this animateSource ['doorstwin1', 1]);
 			};
-			class OpenDoors_4: OpenDoors_1
+			class CloseDoors_3: CloseDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
-				statement = (this animateSource ['doorstwin2', 0]);
+				position = doorstwin1_action;
+				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
+				statement = (this animateSource ['doorstwin1', 0]);
 			};
-			class CloseDoors_4: CloseDoors_1
+			class OpenDoors_4: OpenDoors_1
 			{
 				position = doorstwin2_action;
 				condition = ((this animationSourcePhase 'doorstwin2') < 0.5);
 				statement = (this animateSource ['doorstwin2', 1]);
 			};
-			class OpenDoors_5: OpenDoors_1
+			class CloseDoors_4: CloseDoors_1
 			{
-				position = doorstwin3_action;
-				condition = ((this animationSourcePhase 'doorstwin3') >= 0.5);
-				statement = (this animateSource ['doorstwin3', 0]);
+				position = doorstwin2_action;
+				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
+				statement = (this animateSource ['doorstwin2', 0]);
 			};
-			class CloseDoors_5: CloseDoors_1
+			class OpenDoors_5: OpenDoors_1
 			{
 				position = doorstwin3_action;
 				condition = ((this animationSourcePhase 'doorstwin3') < 0.5);
 				statement = (this animateSource ['doorstwin3', 1]);
 			};
-			class OpenDoors_6: OpenDoors_1
+			class CloseDoors_5: CloseDoors_1
 			{
-				position = doorstwin4_action;
-				condition = ((this animationSourcePhase 'doorstwin4') >= 0.5);
-				statement = (this animateSource ['doorstwin4', 0]);
+				position = doorstwin3_action;
+				condition = ((this animationSourcePhase 'doorstwin3') >= 0.5);
+				statement = (this animateSource ['doorstwin3', 0]);
 			};
-			class CloseDoors_6: CloseDoors_1
+			class OpenDoors_6: OpenDoors_1
 			{
 				position = doorstwin4_action;
 				condition = ((this animationSourcePhase 'doorstwin4') < 0.5);
 				statement = (this animateSource ['doorstwin4', 1]);
+			};
+			class CloseDoors_6: CloseDoors_1
+			{
+				position = doorstwin4_action;
+				condition = ((this animationSourcePhase 'doorstwin4') >= 0.5);
+				statement = (this animateSource ['doorstwin4', 0]);
 			};
 		};
 	};
 	class Land_Ind_GarageOffice: HouseNoDestruct
 	{
 		model = "\DZ\structures\Ind_Garage\Ind_GarageOffice.p3d";
+		displayName = "Garage Office";
 		class AnimationSources
 		{
 			class doors1
@@ -169,7 +171,7 @@ class CfgVehicles
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
 				position = doors1_action;
-				radius = 2;
+				radius = 4;
 				onlyForPlayer = 0;
 				condition = ((this animationSourcePhase 'doors1') >= 0.5);
 				statement = (this animateSource ['doors1', 0]);

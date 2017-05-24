@@ -163,26 +163,26 @@ class CfgVehicles
 			class OpenDoors_3: OpenDoors_1
 			{
 				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3', 1]);
+				condition = ((this animationSourcePhase 'doors3') >= 0.5);
+				statement = (this animateSource ['doors3', 0]);
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
 				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
+				condition = ((this animationSourcePhase 'doors3') < 0.5);
+				statement = (this animateSource ['doors3', 1]);
 			};
 			class OpenDoors_4: OpenDoors_1
 			{
 				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') < 0.5);
-				statement = (this animateSource ['doors4', 1]);
+				condition = ((this animationSourcePhase 'doors4') >= 0.5);
+				statement = (this animateSource ['doors4', 0]);
 			};
 			class CloseDoors_4: CloseDoors_1
 			{
 				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4', 0]);
+				condition = ((this animationSourcePhase 'doors4') < 0.5);
+				statement = (this animateSource ['doors4', 1]);
 			};
 		};
 	};

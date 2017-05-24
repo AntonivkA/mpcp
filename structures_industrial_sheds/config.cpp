@@ -32,6 +32,7 @@ class CfgVehicles
 	{
 		armor = 400;
 		model = "\dz\structures\Shed_Ind\Shed_Ind02.p3d";
+		displayName = "Shed";
 		class AnimationSources
 		{
 			class doorstwin1

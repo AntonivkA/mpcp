@@ -158,6 +158,14 @@ class CfgVehicles
 				initPhase = 0;
 				initOpened = 0.3;
 			};
+			class doors1: doorstwin1
+			{
+				initOpened = 0.3;
+			};
+			class doors2: doorstwin1
+			{
+				initOpened = 0.3;
+			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.5;
@@ -184,75 +192,75 @@ class CfgVehicles
 				position = doors1_action;
 				radius = 5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
+				statement = (this animateSource ['doorstwin1', 1]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
+				statement = (this animateSource ['doorstwin1', 0]);
 			};
-			class OpenDoors_3: OpenDoors_1
+			class OpenDoors_2: OpenDoors_1
 			{
 				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') >= 0.5);
-				statement = (this animateSource ['doors2', 0]);
+				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
+				statement = (this animateSource ['doorstwin1', 1]);
 			};
-			class CloseDoors_3: CloseDoors_1
+			class CloseDoors_2: CloseDoors_1
 			{
 				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') < 0.5);
-				statement = (this animateSource ['doors2', 1]);
+				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
+				statement = (this animateSource ['doorstwin1', 0]);
 			};
 			class OpenDoors_3: OpenDoors_1
-			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
-			};
-			class CloseDoors_3: CloseDoors_1
 			{
 				position = doors3_action;
 				condition = ((this animationSourcePhase 'doors3') < 0.5);
 				statement = (this animateSource ['doors3', 1]);
 			};
-			class OpenDoors_4: OpenDoors_1
+			class CloseDoors_3: CloseDoors_1
 			{
-				position = doors5_action;
-				condition = ((this animationSourcePhase 'doors5') >= 0.5);
-				statement = (this animateSource ['doors5', 0]);
+				position = doors3_action;
+				condition = ((this animationSourcePhase 'doors3') >= 0.5);
+				statement = (this animateSource ['doors3', 0]);
 			};
-			class CloseDoors_4: CloseDoors_1
+			class OpenDoors_4: OpenDoors_1
 			{
 				position = doors5_action;
 				condition = ((this animationSourcePhase 'doors5') < 0.5);
 				statement = (this animateSource ['doors5', 1]);
 			};
+			class CloseDoors_4: CloseDoors_1
+			{
+				position = doors5_action;
+				condition = ((this animationSourcePhase 'doors5') >= 0.5);
+				statement = (this animateSource ['doors5', 0]);
+			};
 			class OpenDoors_5: OpenDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors7') >= 0.5);
-				statement = (this animateSource ['doors7', 0]);
+				position = doors7_action;
+				condition = ((this animationSourcePhase 'doors7') < 0.5);
+				statement = (this animateSource ['doors7', 1]);
 			};
 			class CloseDoors_5: CloseDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors7') < 0.5);
-				statement = (this animateSource ['doors7', 1]);
+				position = doors7_action;
+				condition = ((this animationSourcePhase 'doors7') >= 0.5);
+				statement = (this animateSource ['doors7', 0]);
 			};
 			class OpenDoors_6: OpenDoors_1
 			{
 				position = doors8_action;
-				condition = ((this animationSourcePhase 'doors8') >= 0.5);
-				statement = (this animateSource ['doors8', 0]);
+				condition = ((this animationSourcePhase 'doors8') < 0.5);
+				statement = (this animateSource ['doors8', 1]);
 			};
 			class CloseDoors_6: CloseDoors_1
 			{
 				position = doors8_action;
-				condition = ((this animationSourcePhase 'doors8') < 0.5);
-				statement = (this animateSource ['doors8', 1]);
+				condition = ((this animationSourcePhase 'doors8') >= 0.5);
+				statement = (this animateSource ['doors8', 0]);
 			};
 		};
 	};
@@ -299,63 +307,63 @@ class CfgVehicles
 				position = doors1_action;
 				radius = 5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
+				statement = (this animateSource ['doorstwin1', 1]);
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
 				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
+				statement = (this animateSource ['doorstwin1', 0]);
 			};
 			class OpenDoors_2: OpenDoors_1
-			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
-			};
-			class CloseDoors_2: CloseDoors_1
 			{
 				position = doors3_action;
 				condition = ((this animationSourcePhase 'doors3') < 0.5);
 				statement = (this animateSource ['doors3', 1]);
 			};
-			class OpenDoors_3: OpenDoors_1
+			class CloseDoors_2: CloseDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4', 0]);
+				position = doors3_action;
+				condition = ((this animationSourcePhase 'doors3') >= 0.5);
+				statement = (this animateSource ['doors3', 0]);
 			};
-			class CloseDoors_3: CloseDoors_1
+			class OpenDoors_3: OpenDoors_1
 			{
 				position = doors4_action;
 				condition = ((this animationSourcePhase 'doors4') < 0.5);
 				statement = (this animateSource ['doors4', 1]);
 			};
-			class OpenDoors_4: OpenDoors_1
+			class CloseDoors_3: CloseDoors_1
 			{
-				position = doors5_action;
-				condition = ((this animationSourcePhase 'doors5') >= 0.5);
-				statement = (this animateSource ['doors5', 0]);
+				position = doors4_action;
+				condition = ((this animationSourcePhase 'doors4') >= 0.5);
+				statement = (this animateSource ['doors4', 0]);
 			};
-			class CloseDoors_4: CloseDoors_1
+			class OpenDoors_4: OpenDoors_1
 			{
 				position = doors5_action;
 				condition = ((this animationSourcePhase 'doors5') < 0.5);
 				statement = (this animateSource ['doors5', 1]);
 			};
-			class OpenDoors_5: OpenDoors_1
+			class CloseDoors_4: CloseDoors_1
 			{
-				position = doors6_action;
-				condition = ((this animationSourcePhase 'doors6') >= 0.5);
-				statement = (this animateSource ['doors6', 0]);
+				position = doors5_action;
+				condition = ((this animationSourcePhase 'doors5') >= 0.5);
+				statement = (this animateSource ['doors5', 0]);
 			};
-			class CloseDoors_5: CloseDoors_1
+			class OpenDoors_5: OpenDoors_1
 			{
 				position = doors6_action;
 				condition = ((this animationSourcePhase 'doors6') < 0.5);
 				statement = (this animateSource ['doors6', 1]);
+			};
+			class CloseDoors_5: CloseDoors_1
+			{
+				position = doors6_action;
+				condition = ((this animationSourcePhase 'doors6') >= 0.5);
+				statement = (this animateSource ['doors6', 0]);
 			};
 		};
 	};
