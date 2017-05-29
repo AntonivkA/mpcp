@@ -76,7 +76,7 @@ class CfgVehicles
 			class doors1
 			{
 				source = "user";
-				initPhase = 0;
+				initPhase = 1;
 				animPeriod = 1;
 				sound = "DoorWoodSmall";
 				soundPosition = "doors1_action";
@@ -154,13 +154,13 @@ class CfgVehicles
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
-		actionEnd1 = "CloseDoors_1";
+		actionEnd1 = "OpenDoors_1";
 		actionBegin2 = "OpenDoors_2";
-		actionEnd2 = "CloseDoors_2";
+		actionEnd2 = "OpenDoors_2";
 		actionBegin3 = "OpenDoors_3";
-		actionEnd3 = "CloseDoors_3";
+		actionEnd3 = "OpenDoors_3";
 		actionBegin4 = "OpenDoors_4";
-		actionEnd4 = "CloseDoors_4";
+		actionEnd4 = "OpenDoors_4";
 		numberOfDoors = 4;
 	};
 	class Land_Garaz: HouseNoDestruct
@@ -175,9 +175,19 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 {};
-			class doorstwin3: doorstwin1 {};
+			class doorstwin2: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin2_action";
+			};
+			class doorstwin3: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin3_action";
+			};
 		};
 		class UserActions
 		{
@@ -242,14 +252,22 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors3
 			{
 				source = "user";
 				initPhase = 0;
 				animPeriod = 3;
+				sound = "DoorMetalSlide";
+				soundPosition = "doors3_action";
 			};
-			class doors4: doors3{};
+			class doors4: doors3
+			{
+				sound = "DoorMetalSlide";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{
@@ -316,6 +334,8 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "DoorWoodFront";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -428,8 +448,14 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 {};
+			class doorstwin2: doorstwin1 
+			{
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin2_action";
+			};
 		};
 		class UserActions
 		{
@@ -484,6 +510,8 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorWoodFront";
+				soundPosition = "doorstwin2_action";
 			};
 		};
 		class UserActions
@@ -752,6 +780,8 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorWoodNolatch";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -906,6 +936,8 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "doorFenceMetal";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -968,6 +1000,8 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "doorFenceMetal";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1006,6 +1040,8 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorFenceMetal";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1059,6 +1095,8 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "doorFenceMetal";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1096,6 +1134,8 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
+				sound = "doorFenceMetal";
+				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
@@ -1140,6 +1180,8 @@ class CfgVehicles
 				source = "User";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorFenceMetal";
+				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
@@ -1227,6 +1269,8 @@ class CfgVehicles
 				source = "User";
 				animPeriod = 1;
 				initPhase = 0;
+				sound = "doorFenceMetal";
+				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
