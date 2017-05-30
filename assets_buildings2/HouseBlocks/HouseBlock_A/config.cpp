@@ -49,11 +49,19 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.2;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
+			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "doorWoodFront";
+				soundPosition = "doors5_action";
 			};
 		};
 		class UserActions
@@ -113,12 +121,24 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.1;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
-			class doorstwin3: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
+			class doorstwin3: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin3_action";
+			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodFront";
+				soundPosition = "doors5_action";
 			};
 		};
 		class UserActions
@@ -190,11 +210,19 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.2;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "doorWoodFront";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -254,10 +282,24 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.5;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
-			class doors1: doorstwin1{};
-			class doors4: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
+			class doors1: doorstwin1
+			{
+				sound = "doorWoodFront";
+				soundPosition = "doors1_action";
+			};
+			class doors4: doorstwin1
+			{
+				sound = "doorWoodFront";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{
@@ -332,15 +374,25 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.1;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodFront";
+				soundPosition = "doors3_action";
 			};
 			class doors4: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "doorWoodFront";
+				soundPosition = "doors4_action";
 			};
 		};
 		class UserActions

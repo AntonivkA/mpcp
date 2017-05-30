@@ -22,7 +22,6 @@ enum {
 	destructbuilding = 1
 };
 
-//Class assets_buildings2 : A_GENERALSTORE_01\config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_A_GENERALSTORE_01
@@ -52,11 +51,29 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.6;
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 {};
-			class doorstwin3: doorstwin1 {};
-			class doorstwin4: doorstwin1 {};
-			class doorstwin5: doorstwin1 {};
+			class doorstwin2: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin2_action";
+			};
+			class doorstwin3: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin3_action";
+			};
+			class doorstwin4: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin4_action";
+			};
+			class doorstwin5: doorstwin1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doorstwin5_action";
+			};
 		};
 		class UserActions
 		{
@@ -136,4 +153,3 @@ class CfgVehicles
 		editorSubcategory = "DayZ_Buildings";
 	};
 };
-//};

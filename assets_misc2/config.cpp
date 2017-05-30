@@ -47,6 +47,8 @@ class cfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.3;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -108,9 +110,19 @@ class cfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors1_action";
 			};
-			class doors2: doors1{};
-			class doors3: doors1{};
+			class doors2: doors1
+			{
+				sound = "DoorWoodSmall";
+				soundPosition = "doors2_action";
+			};
+			class doors3: doors1
+			{
+				sound = "DoorWoodSmall";
+				soundPosition = "doors3_action";
+			};
 		};
 		class UserActions
 		{

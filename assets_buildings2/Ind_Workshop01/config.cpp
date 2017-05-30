@@ -45,10 +45,14 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.3;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "DoorMetalSmall";
+				soundPosition = "doors3_action";
 			};
 		};
 		class UserActions
@@ -100,10 +104,14 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.2;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "DoorMetalSmall";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -154,15 +162,25 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.2;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin2_action";
+			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.1;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.3;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors2_action";
 			};
 		};
 		class UserActions
@@ -238,14 +256,20 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.4;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.1;
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
 			};
 			class doors4: doorstwin1
 			{
 				initOpened = 0.9;
+				sound = "doorMetalSmall";
+				soundPosition = "doors4_action";
 			};
 		};
 		class UserActions
@@ -317,18 +341,26 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.3;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.7;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.6;
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
 			};
 		};
 		class UserActions

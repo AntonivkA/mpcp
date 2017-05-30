@@ -50,13 +50,25 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0;
+				sound = "DoorMetalTwin";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doors1
 			{
 				initPhase = 1;
+				sound = "DoorMetalTwin";
+				soundPosition = "doors2_action";
 			};
-			class doors3: doors2 {};
-			class doors4: doors1 {};
+			class doors3: doors2 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doors3_action";
+			};
+			class doors4: doors1 
+			{
+				sound = "DoorMetalTwin";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{
@@ -116,4 +128,3 @@ class CfgVehicles
 		};
 	};
 };
-//};

@@ -51,13 +51,39 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
-			class doors5: doorstwin1{};
-			class doors6: doorstwin1{};
-			class doors7: doorstwin1{};
-			class doors8: doorstwin1{};
-			class doors9: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
+			class doors5: doorstwin1
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors5_action";
+			};
+			class doors6: doorstwin1
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors6_action";
+			};
+			class doors7: doorstwin1
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors7_action";
+			};
+			class doors8: doorstwin1
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors8_action";
+			};
+			class doors9: doorstwin1
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors9_action";
+			};
 		};
 		class UserActions
 		{
@@ -163,4 +189,3 @@ class CfgVehicles
 		model = "\dz\buildings2\HouseBlocks\HouseBlock_D\houseblock_d1_ruins.p3d";
 	};
 };
-//};

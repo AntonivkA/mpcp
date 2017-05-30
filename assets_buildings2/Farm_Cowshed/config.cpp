@@ -43,11 +43,19 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1{};
+			class doorstwin2: doorstwin1
+			{
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin2_action";
+			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.8;
+				sound = "doorWoodTwin";
+				soundPosition = "doors5_action";
 			};
 		};
 		class UserActions

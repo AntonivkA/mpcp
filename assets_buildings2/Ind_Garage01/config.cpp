@@ -44,6 +44,8 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.5;
+				sound = "doorMetalTwin";
+				soundPosition = "twin1_action";
 			};
 		};
 		class UserActions

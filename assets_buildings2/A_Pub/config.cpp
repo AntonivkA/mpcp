@@ -43,24 +43,52 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.1;
+				sound = "doorWoodFront";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doors1
 			{
 				initOpened = 0.7;
+				sound = "doorWoodFront";
+				soundPosition = "doors2_action";
 			};
 			class doors3: doors1
 			{
 				initOpened = 0.3;
+				sound = "doorWoodSmall";
+				soundPosition = "doors3_action";
 			};
 			class doors4: doors1
 			{
 				initOpened = 0.8;
+				sound = "doorWoodSmall";
+				soundPosition = "doors4_action";
 			};
-			class doors5: doors2 {};
-			class doors6: doors2 {};
-			class doors7: doors2 {};
-			class doors8: doors2 {};
-			class doors9: doors2 {};
+			class doors5: doors2 
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors5_action";
+			};
+			class doors6: doors2 
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors6_action";
+			};
+			class doors7: doors2 
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors7_action";
+			};
+			class doors8: doors2 
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors8_action";
+			};
+			class doors9: doors2 
+			{
+				sound = "doorWoodSmall";
+				soundPosition = "doors9_action";
+			};
 		};
 		class UserActions
 		{

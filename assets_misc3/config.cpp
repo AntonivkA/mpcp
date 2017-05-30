@@ -183,6 +183,8 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions

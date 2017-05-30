@@ -54,22 +54,32 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 1.25;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodSmall";
+				soundPosition = "doors5_action";
 			};
 			class doors6: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors6_action";
 			};
 			class doors7: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors7_action";
 			};
 			class doors8: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors8_action";
 			};
 		};
 		class UserActions
@@ -157,30 +167,44 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.3;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.3;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.3;
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
 			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors5_action";
 			};
 			class doors7: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors7_action";
 			};
 			class doors8: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors8_action";
 			};
 		};
 		class UserActions
@@ -280,22 +304,38 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.3;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
 			};
 			class doors4: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors4_action";
 			};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors5_action";
 			};
 			class doors6: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodSmall";
+				soundPosition = "doors6_action";
+			};
+			class doors9: doorstwin1
+			{
+				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors9_action";
 			};
 		};
 		class UserActions
@@ -364,6 +404,18 @@ class CfgVehicles
 				position = doors6_action;
 				condition = ((this animationSourcePhase 'doors6') >= 0.5);
 				statement = (this animateSource ['doors6', 0]);
+			};
+			class OpenDoors_6: OpenDoors_1
+			{
+				position = doors9_action;
+				condition = ((this animationSourcePhase 'doors9') < 0.5);
+				statement = (this animateSource ['doors9', 1]);
+			};
+			class CloseDoors_6: CloseDoors_1
+			{
+				position = doors9_action;
+				condition = ((this animationSourcePhase 'doors9') >= 0.5);
+				statement = (this animateSource ['doors9', 0]);
 			};
 		};
 	};

@@ -45,10 +45,24 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0;
+				sound = "doorMetalTwin";
+				soundPosition = "doorstwin1_action";
 			};
-			class doors3: doorstwin1{};
-			class doors4: doorstwin1{};
-			class doors5: doorstwin1{};
+			class doors3: doorstwin1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
+			};
+			class doors4: doorstwin1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors4_action";
+			};
+			class doors5: doorstwin1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors5_action";
+			};
 		};
 		class UserActions
 		{

@@ -53,6 +53,8 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.5;
+				sound = "doorWoodNolatch";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -88,6 +90,8 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.5;
+				sound = "doorWoodNolatch";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -123,6 +127,8 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.5;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions

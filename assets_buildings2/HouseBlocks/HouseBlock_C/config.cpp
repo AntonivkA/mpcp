@@ -50,18 +50,26 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.4;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors1: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodFront";
+				soundPosition = "doors1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodSmall";
+				soundPosition = "doors2_action";
 			};
 			class doors4: doorstwin1
 			{
 				initOpened = 0.5;
+				sound = "doorWoodSmall";
+				soundPosition = "doors4_action";
 			};
 		};
 		class UserActions
@@ -133,18 +141,26 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.7;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.9;
+				sound = "doorWoodFront";
+				soundPosition = "doors2_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.4;
+				sound = "doorWoodSmall";
+				soundPosition = "doors3_action";
 			};
 			class doors4: doorstwin1
 			{
 				initOpened = 0.2;
+				sound = "doorWoodSmall";
+				soundPosition = "doors4_action";
 			};
 		};
 		class UserActions
@@ -216,14 +232,20 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 1;
 				initOpened = 0.1;
+				sound = "doorWoodTwin";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors2: doorstwin1
 			{
 				initOpened = 0.6;
+				sound = "doorWoodFront";
+				soundPosition = "doors2_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.7;
+				sound = "doorWoodSmall";
+				soundPosition = "doors3_action";
 			};
 		};
 		class UserActions
@@ -281,4 +303,3 @@ class CfgVehicles
 		model = "\dz\buildings2\HouseBlocks\HouseBlock_C\houseblock_c5_ruins.p3d";
 	};
 };
-//};

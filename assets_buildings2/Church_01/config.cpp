@@ -43,12 +43,20 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.2;
+				sound = "DoorWoodSmall";
+				soundPosition = "doorstwin1_action";
 			};
 			class doors3: doorstwin1
 			{
 				initOpened = 0.3;
+				sound = "DoorWoodSmall";
+				soundPosition = "doors3_action";
 			};
-			class doors4: doors3{};
+			class doors4: doors3
+			{
+				sound = "DoorWoodSmall";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{

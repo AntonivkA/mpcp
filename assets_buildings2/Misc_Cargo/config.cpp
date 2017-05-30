@@ -44,8 +44,14 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
-			class doors2: doors1{};
+			class doors2: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
+			};
 		};
 		class UserActions
 		{
@@ -96,10 +102,24 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
-			class doors2: doors1{};
-			class doors3: doors1{};
-			class doors4: doors1{};
+			class doors2: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
+			};
+			class doors3: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
+			};
+			class doors4: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{
@@ -242,10 +262,24 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
-			class doors2: doors1{};
-			class doors3: doors1{};
-			class doors4: doors1{};
+			class doors2: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
+			};
+			class doors3: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors3_action";
+			};
+			class doors4: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors4_action";
+			};
 		};
 		class UserActions
 		{
@@ -319,8 +353,14 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
-			class doors2: doors1{};
+			class doors2: doors1
+			{
+				sound = "doorMetalSmall";
+				soundPosition = "doors2_action";
+			};
 		};
 		class UserActions
 		{

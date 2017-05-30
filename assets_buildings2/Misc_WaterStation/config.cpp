@@ -44,6 +44,8 @@ class cfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.4;
+				sound = "doorMetalSmall";
+				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
