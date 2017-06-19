@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 6.18
-//'now' is Wed May 17 08:05:48 2017 : 'file' last modified on Fri Jan 27 16:46:10 2017
+//DeRap: /mnt/g/Program Files (x86)/Steam/steamapps/common/Arma 3/@DayZ/Addons/assets_buildings2/Barn_Metal/config.bin
+//Produced from mikero's Dos Tools Dll version 6.31
+//'now' is Mon Jun 19 20:32:18 2017 : 'file' last modified on Tue May 23 23:38:03 2017
 //http://dev-heaven.net/projects/list_files/mikero-pbodll
 ////////////////////////////////////////////////////////////////////
 
@@ -22,7 +23,6 @@ enum {
 	destructbuilding = 1
 };
 
-//Class assets_buildings2 : Barn_Metal\config.bin{
 class CfgPatches
 {
 	class DZ_Buildings2_Barn_Metal
@@ -50,25 +50,13 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0;
-				sound = "DoorMetalTwin";
-				soundPosition = "doors1_action";
 			};
 			class doors2: doors1
 			{
 				initPhase = 1;
-				sound = "DoorMetalTwin";
-				soundPosition = "doors2_action";
 			};
-			class doors3: doors2 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doors3_action";
-			};
-			class doors4: doors1 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doors4_action";
-			};
+			class doors3: doors2{};
+			class doors4: doors1{};
 		};
 		class UserActions
 		{
@@ -76,54 +64,54 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 6;
+				position = "doors1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') < 0.5);
-				statement = (this animateSource ['doors2', 1]);
+				position = "doors2_action";
+				condition = "((this animationSourcePhase 'doors2') < 0.5)";
+				statement = "(this animateSource ['doors2', 1])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') >= 0.5);
-				statement = (this animateSource ['doors2', 0]);
+				position = "doors2_action";
+				condition = "((this animationSourcePhase 'doors2') >= 0.5)";
+				statement = "(this animateSource ['doors2', 0])";
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3', 1]);
+				position = "doors3_action";
+				condition = "((this animationSourcePhase 'doors3') < 0.5)";
+				statement = "(this animateSource ['doors3', 1])";
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
+				position = "doors3_action";
+				condition = "((this animationSourcePhase 'doors3') >= 0.5)";
+				statement = "(this animateSource ['doors3', 0])";
 			};
 			class OpenDoors_4: OpenDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') < 0.5);
-				statement = (this animateSource ['doors4', 1]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') < 0.5)";
+				statement = "(this animateSource ['doors4', 1])";
 			};
 			class CloseDoors_4: CloseDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4', 0]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') >= 0.5)";
+				statement = "(this animateSource ['doors4', 0])";
 			};
 		};
 	};

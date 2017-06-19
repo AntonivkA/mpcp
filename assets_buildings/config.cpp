@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 6.18
-//'now' is Tue May 16 04:58:13 2017 : 'file' last modified on Tue Dec 20 21:41:43 2016
+//DeRap: /mnt/g/Program Files (x86)/Steam/steamapps/common/Arma 3/@DayZ/Addons/assets_buildings/config.bin
+//Produced from mikero's Dos Tools Dll version 6.31
+//'now' is Mon Jun 19 20:17:26 2017 : 'file' last modified on Thu May 25 19:07:51 2017
 //http://dev-heaven.net/projects/list_files/mikero-pbodll
 ////////////////////////////////////////////////////////////////////
 
@@ -22,12 +23,11 @@ enum {
 	destructbuilding = 1
 };
 
-//Class assets_buildings : config.bin{
 class CfgPatches
 {
 	class DZ_Buildings
 	{
-		units[] = {"Land_Hlidac_budka","Land_Hangar_2","Land_molo_drevo_bs","Land_molo_drevo_end","Land_plot_zed_drevo1_branka","Land_kulna","Land_pumpa","Land_vez","Land_Vysilac_FM","Land_telek1","Land_Stoplight02","Land_NavigLight","Land_runway_edgelight","Land_Runway_PAPI","Land_Runway_PAPI_2","Land_Runway_PAPI_3","Land_Runway_PAPI_4","Land_brana02nodoor","Land_budova1","Land_budova2","Land_hut06","Land_repair_center","Land_sara_hasic_zbroj","Land_SS_hangar","Land_stodola_old_open","Land_stodola_open","Land_podesta_1_cube","Land_podesta_1_cube_long","Land_podesta_1_mid","Land_podesta_1_mid_cornl","Land_podesta_1_stairs3","Land_podesta_1_stairs4","Land_podesta_s5","Land_ChristmasTree"};
+		units[] = {"Land_Hlidac_budka","Land_Hangar_2","Land_molo_drevo_bs","Land_molo_drevo_end","Land_plot_zed_drevo1_branka","Land_kulna","Land_pumpa","Land_vez","Land_Vysilac_FM","Land_telek1","Land_Stoplight02","Land_NavigLight","Land_runway_edgelight","Land_Runway_PAPI","Land_Runway_PAPI_2","Land_Runway_PAPI_3","Land_Runway_PAPI_4","Land_brana02nodoor","Land_budova1","Land_budova2","Land_hut06","Land_repair_center","Land_sara_hasic_zbroj","Land_SS_hangar","Land_stodola_old_open","Land_stodola_open","Land_budova4_in","Land_Garaz","Land_kasna_new","Land_komin","Land_newplot","Land_newplot2","Land_posed","Land_psi_bouda","Land_sara_domek_zluty","Land_Tovarna2","Land_trafostanica_velka_draty","Land_trafostanica_velka","UndergroundStash","Land_anvil","Land_case_bedroom_b","Land_case_wall_unit_part_c","Land_case_wall_unit_part_d","Land_dhangar_brownskrin","Land_dkamna_bila","Land_drill","Land_grinder","Land_kitchen_table_a","Land_metal_cutting_saw","Land_postel_panelak1","Land_postel_panelak2","Land_stul_kuch1","Land_vise","Land_workbench","Land_drevo_hromada","Land_KBud","Land_lampa_ind","Land_lampa_ind_zebr","Land_lampa_sidl","Land_lampa_sidl_2","Land_lampa_sidl_3","Land_lavicka_1","Land_lavicka_2","Land_lavicka_3","Land_lavicka_4","Land_nastenka2","Land_nastenka3","Land_Nasypka","Land_pletivo_wired","Land_pletivo_wired_branaL_civil","Land_pletivo_wired_branaP","Land_pletivo_wired_hole","Land_pletivo_wired_slope","Land_plot_green_brank_o","Land_plot_green_branka","Land_plot_green_cihlsloup","Land_plot_green_draty","Land_plot_green_vrat_l","Land_plot_green_vrat_o","Land_plot_green_vrat_r","Land_plot_green_vrata","Land_plot_rust_brank_o","Land_plot_rust_branka","Land_plot_rust_cihlsloup","Land_plot_rust_draty","Land_plot_rust_vrat_l","Land_plot_rust_vrat_o","Land_plot_rust_vrat_r","Land_plot_rust_vrata","Land_plot_vlnplech1","Land_plot_vlnplech2","Land_plot_zed_drevo_sloupek","Land_plot_zed_drevo1","Land_plot_zed_drevo2","Land_plot_zed_drevo3","Land_Stoh","Land_Zabradli_pruhovane_levykonec","Land_Zabradli_pruhovane_pravykonec","Land_Zabradli_pruhovane_stred","Land_Zabradli_pruhovane_stred_slope","Land_ACamp","Land_Camp","Land_CampEast","Land_Mash","Land_medical_tent","Land_medical_tent_frame","Land_Pristresek_mensi","Land_shower_tent"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DZ_Data"};
@@ -49,7 +49,6 @@ class CfgVehicles
 		class DestructionEffects{};
 	};
 	class HouseNoDestruct: House{};
-	//buildings
 	class Land_brana02nodoor: House
 	{
 		scope = 2;
@@ -103,54 +102,54 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
+				position = "doors1_action";
 				radius = 2;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') >= 0.5);
-				statement = (this animateSource ['doors2', 0]);
+				position = "doors2_action";
+				condition = "((this animationSourcePhase 'doors2') >= 0.5)";
+				statement = "(this animateSource ['doors2', 0])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doors2_action;
-				condition = ((this animationSourcePhase 'doors2') < 0.5);
-				statement = (this animateSource ['doors2', 1]);
+				position = "doors2_action";
+				condition = "((this animationSourcePhase 'doors2') < 0.5)";
+				statement = "(this animateSource ['doors2', 1])";
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3', 0]);
+				position = "doors3_action";
+				condition = "((this animationSourcePhase 'doors3') >= 0.5)";
+				statement = "(this animateSource ['doors3', 0])";
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3', 1]);
+				position = "doors3_action";
+				condition = "((this animationSourcePhase 'doors3') < 0.5)";
+				statement = "(this animateSource ['doors3', 1])";
 			};
 			class OpenDoors_4: OpenDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4', 0]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') >= 0.5)";
+				statement = "(this animateSource ['doors4', 0])";
 			};
 			class CloseDoors_4: CloseDoors_1
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') < 0.5);
-				statement = (this animateSource ['doors4', 1]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') < 0.5)";
+				statement = "(this animateSource ['doors4', 1])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -178,12 +177,12 @@ class CfgVehicles
 				sound = "DoorMetalTwin";
 				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 
+			class doorstwin2: doorstwin1
 			{
 				sound = "DoorMetalTwin";
 				soundPosition = "doorstwin2_action";
 			};
-			class doorstwin3: doorstwin1 
+			class doorstwin3: doorstwin1
 			{
 				sound = "DoorMetalTwin";
 				soundPosition = "doorstwin3_action";
@@ -195,42 +194,42 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doorstwin1_action;
-				radius = 3.5;
+				position = "doorstwin1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1', 0])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') < 0.5);
-				statement = (this animateSource ['doorstwin2', 1]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') < 0.5)";
+				statement = "(this animateSource ['doorstwin2', 1])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
-				statement = (this animateSource ['doorstwin2', 0]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') >= 0.5)";
+				statement = "(this animateSource ['doorstwin2', 0])";
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doorstwin3_action;
-				condition = ((this animationSourcePhase 'doorstwin3') < 0.5);
-				statement = (this animateSource ['doorstwin3', 1]);
+				position = "doorstwin3_action";
+				condition = "((this animationSourcePhase 'doorstwin3') < 0.5)";
+				statement = "(this animateSource ['doorstwin3', 1])";
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doorstwin3_action;
-				condition = ((this animationSourcePhase 'doorstwin3') >= 0.5);
-				statement = (this animateSource ['doorstwin3', 0]);
+				position = "doorstwin3_action";
+				condition = "((this animationSourcePhase 'doorstwin3') >= 0.5)";
+				statement = "(this animateSource ['doorstwin3', 0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -252,22 +251,14 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin1_action";
 			};
 			class doors3
 			{
 				source = "user";
 				initPhase = 0;
 				animPeriod = 3;
-				sound = "DoorMetalSlide";
-				soundPosition = "doors3_action";
 			};
-			class doors4: doors3
-			{
-				sound = "DoorMetalSlide";
-				soundPosition = "doors4_action";
-			};
+			class doors4: doors3{};
 		};
 		class UserActions
 		{
@@ -275,42 +266,46 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doorstwin1_action;
+				position = "doorstwin1_action";
 				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1',0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1',0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1',1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1',1])";
 			};
-			class OpenDoors_2: OpenDoors_1
+			class OpenDoors_2
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') < 0.5);
-				statement = (this animateSource ['doors3',1]);
+				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
+				displayName = "$STR_DN_OUT_O_DOOR";
+				position = "doors3_action";
+				radius = 3;
+				onlyForPlayer = 0;
+				condition = "((this animationSourcePhase 'doors3') < 0.5)";
+				statement = "(this animateSource ['doors3',1])";
 			};
-			class CloseDoors_2: CloseDoors_1
+			class CloseDoors_2: OpenDoors_2_2
 			{
-				position = doors3_action;
-				condition = ((this animationSourcePhase 'doors3') >= 0.5);
-				statement = (this animateSource ['doors3',0]);
+				position = "doors3_action";
+				condition = "((this animationSourcePhase 'doors3') >= 0.5)";
+				statement = "(this animateSource ['doors3',0])";
 			};
-			class OpenDoors_3: OpenDoors_1
+			class OpenDoors_3: OpenDoors_2
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') < 0.5);
-				statement = (this animateSource ['doors4',1]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') < 0.5)";
+				statement = "(this animateSource ['doors4',1])";
 			};
-			class CloseDoors_3: CloseDoors_1
+			class CloseDoors_3: CloseDoors_2
 			{
-				position = doors4_action;
-				condition = ((this animationSourcePhase 'doors4') >= 0.5);
-				statement = (this animateSource ['doors4',0]);
+				position = "doors4_action";
+				condition = "((this animationSourcePhase 'doors4') >= 0.5)";
+				statement = "(this animateSource ['doors4',0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -334,8 +329,6 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "DoorWoodFront";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -344,19 +337,19 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 4;
+				position = "doors1_action";
+				radius = 2.5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1',0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1',0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				position = doors1_action;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1',1]);
+				position = "doors1_action";
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1',1])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -448,14 +441,8 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorMetalTwin";
-				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 
-			{
-				sound = "doorMetalTwin";
-				soundPosition = "doorstwin2_action";
-			};
+			class doorstwin2: doorstwin1{};
 		};
 		class UserActions
 		{
@@ -463,31 +450,31 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doorstwin1_action;
+				position = "doorstwin1_action";
 				radius = 3.5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1',0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1',0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				position = doorstwin1_action;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1',1]);
+				position = "doorstwin1_action";
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1',1])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
-				statement = (this animateSource ['doorstwin2',0]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') >= 0.5)";
+				statement = "(this animateSource ['doorstwin2',0])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') < 0.5);
-				statement = (this animateSource ['doorstwin2',1]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') < 0.5)";
+				statement = "(this animateSource ['doorstwin2',1])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -510,8 +497,6 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorWoodFront";
-				soundPosition = "doorstwin2_action";
 			};
 		};
 		class UserActions
@@ -523,16 +508,16 @@ class CfgVehicles
 				position = "doors1_action";
 				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
 				position = "doors1_action";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -634,7 +619,6 @@ class CfgVehicles
 			animations[] = {{"dz\buildings\rtm\vysilac_fm.rtm",0.5,3}};
 		};
 	};
-	//furniture
 	class Land_anvil: House
 	{
 		scope = 2;
@@ -755,10 +739,9 @@ class CfgVehicles
 		editorSubcategory = "DayZ_Furniture";
 		model = "dz\buildings\furniture\workbench.p3d";
 	};
-	//misc
 	class Land_drevo_hromada: House
 	{
-		scope = 2; 
+		scope = 2;
 		displayName = "Heap of firewood";
 		editorCategory = "DayZ";
 		editorSubcategory = "DayZ_Misc";
@@ -780,8 +763,6 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorWoodNolatch";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -790,19 +771,19 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 4;
+				position = "doors1_action";
+				radius = 2.5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				position = doors1_action;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				position = "doors1_action";
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -936,8 +917,6 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "doorFenceMetal";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -946,18 +925,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 6;
+				position = "doors1_action";
+				radius = 5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 		};
 	};
@@ -1000,8 +979,6 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "doorFenceMetal";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1010,18 +987,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
+				position = "doors1_action";
 				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 		};
 	};
@@ -1040,8 +1017,6 @@ class CfgVehicles
 				source = "user";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorFenceMetal";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1050,18 +1025,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 4;
+				position = "doors1_action";
+				radius = 10;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1',1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1',1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1',0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1',0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -1095,8 +1070,6 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "doorFenceMetal";
-				soundPosition = "doors1_action";
 			};
 		};
 		class UserActions
@@ -1105,18 +1078,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 6;
+				position = "doors1_action";
+				radius = 4;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doors1') >= 0.5);
-				statement = (this animateSource ['doors1', 0]);
+				condition = "((this animationSourcePhase 'doors1') >= 0.5)";
+				statement = "(this animateSource ['doors1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doors1') < 0.5);
-				statement = (this animateSource ['doors1', 1]);
+				condition = "((this animationSourcePhase 'doors1') < 0.5)";
+				statement = "(this animateSource ['doors1', 1])";
 			};
 		};
 	};
@@ -1134,8 +1107,6 @@ class CfgVehicles
 				source = "user";
 				initPhase = 0;
 				animPeriod = 1;
-				sound = "doorFenceMetal";
-				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
@@ -1144,18 +1115,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 6;
+				position = "doors1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1', 1])";
 			};
 		};
 	};
@@ -1180,8 +1151,6 @@ class CfgVehicles
 				source = "User";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorFenceMetal";
-				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
@@ -1190,18 +1159,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
-				radius = 6;
+				position = "doors1_action";
+				radius = 5;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1',1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1',1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1',0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1',0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -1269,8 +1238,6 @@ class CfgVehicles
 				source = "User";
 				animPeriod = 1;
 				initPhase = 0;
-				sound = "doorFenceMetal";
-				soundPosition = "doorstwin1_action";
 			};
 		};
 		class UserActions
@@ -1279,18 +1246,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doors1_action;
+				position = "doors1_action";
 				radius = 6;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1',1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1',1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1',0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1',0])";
 			};
 		};
 		actionBegin1 = "OpenDoors_1";
@@ -1469,7 +1436,6 @@ class CfgVehicles
 		editorSubcategory = "DayZ_Misc";
 		model = "dz\buildings\Misc\Zabradli_pruhovane_stred_slope.p3d";
 	};
-	//tents
 	class Land_ACamp: House
 	{
 		scope = 2;
@@ -1556,7 +1522,6 @@ class CfgVehicles
 		editorSubcategory = "DayZ_Misc";
 		model = "dz\buildings\Tents\shower_tent.p3d";
 	};
-	//other
 	class StreetLampOff: House{};
 };
 class CfgNonAIVehicles
@@ -1576,4 +1541,3 @@ class CfgSFX
 		largeBell[] = {"dz\buildings\Sound\bell2",0.31622776,1};
 	};
 };
-//};

@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 6.18
-//'now' is Wed May 17 08:05:47 2017 : 'file' last modified on Fri Jan 27 16:46:09 2017
+//DeRap: /mnt/g/Program Files (x86)/Steam/steamapps/common/Arma 3/@DayZ/Addons/assets_buildings2/A_GENERALSTORE_01/config.bin
+//Produced from mikero's Dos Tools Dll version 6.31
+//'now' is Mon Jun 19 20:29:15 2017 : 'file' last modified on Tue May 23 11:02:41 2017
 //http://dev-heaven.net/projects/list_files/mikero-pbodll
 ////////////////////////////////////////////////////////////////////
 
@@ -51,29 +52,11 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.6;
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin2_action";
-			};
-			class doorstwin3: doorstwin1 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin3_action";
-			};
-			class doorstwin4: doorstwin1 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin4_action";
-			};
-			class doorstwin5: doorstwin1 
-			{
-				sound = "DoorMetalTwin";
-				soundPosition = "doorstwin5_action";
-			};
+			class doorstwin2: doorstwin1{};
+			class doorstwin3: doorstwin1{};
+			class doorstwin4: doorstwin1{};
+			class doorstwin5: doorstwin1{};
 		};
 		class UserActions
 		{
@@ -81,66 +64,66 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doorstwin1_action;
-				radius = 2.5;
+				position = "doorstwin1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1', 0])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') < 0.5);
-				statement = (this animateSource ['doorstwin2', 1]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') < 0.5)";
+				statement = "(this animateSource ['doorstwin2', 1])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
-				statement = (this animateSource ['doorstwin2', 0]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') >= 0.5)";
+				statement = "(this animateSource ['doorstwin2', 0])";
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doorstwin3_action;
-				condition = ((this animationSourcePhase 'doorstwin3') < 0.5);
-				statement = (this animateSource ['doorstwin3', 1]);
+				position = "doorstwin3_action";
+				condition = "((this animationSourcePhase 'doorstwin3') < 0.5)";
+				statement = "(this animateSource ['doorstwin3', 1])";
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doorstwin3_action;
-				condition = ((this animationSourcePhase 'doorstwin3') >= 0.5);
-				statement = (this animateSource ['doorstwin3', 0]);
+				position = "doorstwin3_action";
+				condition = "((this animationSourcePhase 'doorstwin3') >= 0.5)";
+				statement = "(this animateSource ['doorstwin3', 0])";
 			};
 			class OpenDoors_4: OpenDoors_1
 			{
-				position = doorstwin4_action;
-				condition = ((this animationSourcePhase 'doorstwin4') < 0.5);
-				statement = (this animateSource ['doorstwin4', 1]);
+				position = "doorstwin4_action";
+				condition = "((this animationSourcePhase 'doorstwin4') < 0.5)";
+				statement = "(this animateSource ['doorstwin4', 1])";
 			};
 			class CloseDoors_4: CloseDoors_1
 			{
-				position = doorstwin4_action;
-				condition = ((this animationSourcePhase 'doorstwin4') >= 0.5);
-				statement = (this animateSource ['doorstwin4', 0]);
+				position = "doorstwin4_action";
+				condition = "((this animationSourcePhase 'doorstwin4') >= 0.5)";
+				statement = "(this animateSource ['doorstwin4', 0])";
 			};
 			class OpenDoors_5: OpenDoors_1
 			{
-				position = doorstwin5_action;
-				condition = ((this animationSourcePhase 'doorstwin5') < 0.5);
-				statement = (this animateSource ['doorstwin5', 1]);
+				position = "doorstwin5_action";
+				condition = "((this animationSourcePhase 'doorstwin5') < 0.5)";
+				statement = "(this animateSource ['doorstwin5', 1])";
 			};
 			class CloseDoors_5: CloseDoors_1
 			{
-				position = doorstwin5_action;
-				condition = ((this animationSourcePhase 'doorstwin5') >= 0.5);
-				statement = (this animateSource ['doorstwin5', 0]);
+				position = "doorstwin5_action";
+				condition = "((this animationSourcePhase 'doorstwin5') >= 0.5)";
+				statement = "(this animateSource ['doorstwin5', 0])";
 			};
 		};
 	};

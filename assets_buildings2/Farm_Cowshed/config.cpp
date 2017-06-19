@@ -1,5 +1,13 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: /mnt/g/Program Files (x86)/Steam/steamapps/common/Arma 3/@DayZ/Addons/assets_buildings2/Farm_Cowshed/config.bin
+//Produced from mikero's Dos Tools Dll version 6.31
+//'now' is Mon Jun 19 20:34:44 2017 : 'file' last modified on Wed May 24 13:32:37 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
 #define _ARMA_
 
+//(12 Enums)
 enum {
 	destructengine = 2,
 	destructdefault = 6,
@@ -43,19 +51,11 @@ class CfgVehicles
 				animPeriod = 1;
 				initPhase = 0;
 				initOpened = 0.1;
-				sound = "doorWoodTwin";
-				soundPosition = "doorstwin1_action";
 			};
-			class doorstwin2: doorstwin1
-			{
-				sound = "doorWoodTwin";
-				soundPosition = "doorstwin2_action";
-			};
+			class doorstwin2: doorstwin1{};
 			class doors5: doorstwin1
 			{
 				initOpened = 0.8;
-				sound = "doorWoodTwin";
-				soundPosition = "doors5_action";
 			};
 		};
 		class UserActions
@@ -64,42 +64,42 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = doorstwin1_action;
-				radius = 4;
+				position = "doorstwin1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1', 0])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1', 1])";
 			};
 			class OpenDoors_2: OpenDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') >= 0.5);
-				statement = (this animateSource ['doorstwin2', 0]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') >= 0.5)";
+				statement = "(this animateSource ['doorstwin2', 0])";
 			};
 			class CloseDoors_2: CloseDoors_1
 			{
-				position = doorstwin2_action;
-				condition = ((this animationSourcePhase 'doorstwin2') < 0.5);
-				statement = (this animateSource ['doorstwin2', 1]);
+				position = "doorstwin2_action";
+				condition = "((this animationSourcePhase 'doorstwin2') < 0.5)";
+				statement = "(this animateSource ['doorstwin2', 1])";
 			};
 			class OpenDoors_3: OpenDoors_1
 			{
-				position = doors5_action;
-				condition = ((this animationSourcePhase 'doors5') >= 0.5);
-				statement = (this animateSource ['doors5', 0]);
+				position = "doors5_action";
+				condition = "((this animationSourcePhase 'doors5') >= 0.5)";
+				statement = "(this animateSource ['doors5', 0])";
 			};
 			class CloseDoors_3: CloseDoors_1
 			{
-				position = doors5_action;
-				condition = ((this animationSourcePhase 'doors5') < 0.5);
-				statement = (this animateSource ['doors5', 1]);
+				position = "doors5_action";
+				condition = "((this animationSourcePhase 'doors5') < 0.5)";
+				statement = "(this animateSource ['doors5', 1])";
 			};
 		};
 	};
@@ -134,18 +134,18 @@ class CfgVehicles
 			{
 				displayNameDefault = "$STR_DN_OUT_O_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_O_DOOR";
-				position = twin1_action;
-				radius = 5;
+				position = "twin1_action";
+				radius = 3;
 				onlyForPlayer = 0;
-				condition = ((this animationSourcePhase 'doorstwin1') < 0.5);
-				statement = (this animateSource ['doorstwin1', 1]);
+				condition = "((this animationSourcePhase 'doorstwin1') < 0.5)";
+				statement = "(this animateSource ['doorstwin1', 1])";
 			};
 			class CloseDoors_1: OpenDoors_1
 			{
-				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT"; 
+				displayNameDefault = "$STR_DN_OUT_C_DOOR_DEFAULT";
 				displayName = "$STR_DN_OUT_C_DOOR";
-				condition = ((this animationSourcePhase 'doorstwin1') >= 0.5);
-				statement = (this animateSource ['doorstwin1', 0]);
+				condition = "((this animationSourcePhase 'doorstwin1') >= 0.5)";
+				statement = "(this animateSource ['doorstwin1', 0])";
 			};
 		};
 	};
